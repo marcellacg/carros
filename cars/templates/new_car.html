@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data"> <!-- enctype vai enviar conteudos, como por exemplo binarios de uma imagem -->
+        {% csrf_token %} <!-- middleware do django, protecao para alguns tipos de ataque-->
+        <table>
+            {{ form.as_table }} <!-- as_table só funciona dentro de tag table-->
+            <!-- utilizando o nome form pq é o nome padrao que a create view vai criar-->
+        </table>
+        <input type="submit" value="Cadastrar" class="btn btn-primary">
+    </form>
+{% endblock %}

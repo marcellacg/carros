@@ -24,6 +24,7 @@ class Car(models.Model):  # tabela car no banco de dados
     def __str__(self):
         return self.model
 
+
 #classes para o inventário da aplicação
 #assim que atualizamos esse arquivo, rodar o makemigrations
 
